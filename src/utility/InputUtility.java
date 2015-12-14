@@ -1,4 +1,4 @@
-package input;
+package utility;
 
 public class InputUtility {
 	private static int mouseX, mouseY;
