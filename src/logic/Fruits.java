@@ -1,5 +1,7 @@
 package logic;
 
+import java.awt.image.BufferedImage;
+
 public abstract class Fruits {
 	protected int x;
 	protected int y;
@@ -7,6 +9,7 @@ public abstract class Fruits {
 	protected int score;
 	protected boolean isInCondition;
 	protected boolean isDestroy;
+	protected static BufferedImage img;
 
 	
 	public Fruits(int x, int y, int score, boolean isInCondition, boolean isDestroy){

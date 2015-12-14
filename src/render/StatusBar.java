@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 import logic.Status;
 
-public class StatusBar extends JPanel {
+public class StatusBar extends JPanel implements IRenderable {
 	
 	public StatusBar(){
 		setPreferredSize(new Dimension(1024,40));
@@ -19,13 +19,31 @@ public class StatusBar extends JPanel {
 	
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
-		Graphics2D g2d = (Graphics2D)g;
+		Graphics2D g2d = (Graphics2D) g;
+		this.draw(g2d);
+	}
+
+	@Override
+	public int getZ() {
+		// TODO Auto-generated method stub
+		return Integer.MAX_VALUE;
+	}
+
+	@Override
+	public void draw(Graphics2D g2d) {
+		// TODO Auto-generated method stub
+		
 		g2d.setColor(Color.BLACK);
 		g2d.fillRect(0, 0, 1024,40);
 		g2d.setColor(Color.WHITE);
 		g2d.setFont(Screen.smallfont);
-		g2d.drawString("Time : " + Status.time,5,35);
-		g2d.drawString("Score : " + Status.score,341,35);
+		g2d.drawString("Time : " + Status.time,5,30);
+		g2d.drawString("Score : " + Status.score,341,30);
 	}
+	
+	public boolean isVisible(){
+		return true;
+	}
+	
 
 }

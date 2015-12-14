@@ -24,11 +24,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import logic.Player;
 import utility.InputUtility;
 
 public class Screen extends JPanel {
 	private boolean start = false;
-	static ClassLoader load = Screen.class.getClassLoader();
+	public Player p = new Player(this);
+	public static ClassLoader load = Screen.class.getClassLoader();
 	private static BufferedImage image;
 	private static AudioClip sound ;
 	static{
@@ -47,7 +49,7 @@ public class Screen extends JPanel {
 		try {
 			largefont = Font.createFont(Font.TRUETYPE_FONT,new File(load.getResource("res/font/Arabica/Arabica file/Arabica.ttf").toURI()));
 			largefont = largefont.deriveFont(Font.BOLD, 70);
-			smallfont = largefont.deriveFont(Font.BOLD, 30);
+			smallfont = largefont.deriveFont(Font.BOLD, 40);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -65,29 +67,8 @@ public class Screen extends JPanel {
 	
 	public Screen(){
 		sound.loop();
+		this.requestFocus();
 		this.setPreferredSize(new Dimension(1024,512));
-		this.addKeyListener(new KeyListener() {
-			
-			@Override
-			public void keyTyped(KeyEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void keyReleased(KeyEvent e) {
-				// TODO Auto-generated method stub
-					InputUtility.setKeyPressed(e.getKeyCode(),false);
-				
-			}
-			
-			@Override
-			public void keyPressed(KeyEvent e) {
-				// TODO Auto-generated method stub
-					InputUtility.setKeyPressed(e.getKeyCode(),true);
-				
-			}
-		});
 	}
 	
 	public void paintComponent(Graphics g){
@@ -95,6 +76,7 @@ public class Screen extends JPanel {
 		Graphics2D g2d = (Graphics2D)g;
 		g2d.drawImage(image, null, 0, 0);
 		
+		p.draw(g2d);
 		g2d.setFont(largefont);
 		FontMetrics met = g2d.getFontMetrics();
 		double w = met.getStringBounds("PRESS 'SPACE' TO START",g2d).getWidth();
