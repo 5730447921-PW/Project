@@ -9,7 +9,7 @@ import render.IRenderable;
 import render.Screen;
 import utility.RandomUtility;
 
-public class Apple extends Fruits implements Collectible , IRenderable {
+public class Apple extends Fruits  {
 	
 	static{
 		try{
@@ -26,7 +26,7 @@ public class Apple extends Fruits implements Collectible , IRenderable {
 	
 
 	@Override
-	public void move(int speed) {
+	public void move() {
 		// TODO Auto-generated method stub
 		if(!isDestroy || y <= 460){
 			y += speed;

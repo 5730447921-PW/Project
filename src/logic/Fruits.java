@@ -2,7 +2,9 @@ package logic;
 
 import java.awt.image.BufferedImage;
 
-public abstract class Fruits {
+import render.IRenderable;
+
+public abstract class Fruits implements Collectible , IRenderable{
 	protected int x;
 	protected int y;
 	protected int speed;

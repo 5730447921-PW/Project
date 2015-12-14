@@ -15,7 +15,6 @@ import utility.InputUtility;
 public class Player implements IRenderable{
 	private int x=512,y=336,speed=5;
 	//private boolean outOfFrame;
-	private Screen s;
 	private static BufferedImage image = null;
 	static{
 		try{
@@ -25,8 +24,7 @@ public class Player implements IRenderable{
 			
 		}
 	}
-	public Player(Screen s) {
-		this.s = s;
+	public Player() {
 		//y = 336;
 		//x = 512;
 		
@@ -39,8 +37,8 @@ public class Player implements IRenderable{
 			}
 		}else if(InputUtility.getKeyPressed(KeyEvent.VK_RIGHT)){
 			x+=speed;
-			if(x>s.getWidth()-image.getWidth()){
-				x=s.getWidth()-image.getWidth();
+			if(x>Screen.screenWidth-image.getWidth()){
+				x=Screen.screenWidth-image.getWidth();
 			}
 		}
 	}

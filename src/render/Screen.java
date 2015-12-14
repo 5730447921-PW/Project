@@ -7,16 +7,11 @@ import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.Buffer;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
@@ -24,12 +19,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import logic.Player;
+import logic.*;
 import utility.InputUtility;
 
 public class Screen extends JPanel {
+	public static int screenWidth=1024,screenHeight=512;
 	private boolean start = false;
-	public Player p = new Player(this);
+	private GameLogic gl;
 	public static ClassLoader load = Screen.class.getClassLoader();
 	private static BufferedImage image;
 	private static AudioClip sound ;
@@ -65,10 +61,11 @@ public class Screen extends JPanel {
 		}
 	}
 	
-	public Screen(){
+	public Screen(GameLogic gl){
+		this.gl=gl;
 		sound.loop();
 		this.requestFocus();
-		this.setPreferredSize(new Dimension(1024,512));
+		this.setPreferredSize(new Dimension(screenWidth	,screenHeight));
 	}
 	
 	public void paintComponent(Graphics g){
@@ -76,7 +73,10 @@ public class Screen extends JPanel {
 		Graphics2D g2d = (Graphics2D)g;
 		g2d.drawImage(image, null, 0, 0);
 		
-		p.draw(g2d);
+		gl.player.draw(g2d);
+		for (int i = 0; i < gl.fruits.size(); i++) {
+			gl.fruits.get(i).draw(g2d);
+		}
 		g2d.setFont(largefont);
 		FontMetrics met = g2d.getFontMetrics();
 		double w = met.getStringBounds("PRESS 'SPACE' TO START",g2d).getWidth();

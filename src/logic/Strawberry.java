@@ -9,7 +9,7 @@ import render.IRenderable;
 import render.Screen;
 import utility.RandomUtility;
 
-public class Strawberry extends Fruits implements Collectible,IRenderable {
+public class Strawberry extends Fruits  {
 	
 	static{
 		try{
@@ -19,14 +19,14 @@ public class Strawberry extends Fruits implements Collectible,IRenderable {
 		}
 	}
 	
-	public Strawberry(int x, int y ,boolean isInCondition,int speed){
+	public Strawberry(boolean isInCondition,int speed){
 		super(RandomUtility.random(0,1024-img.getWidth()),0-img.getHeight(),5,isInCondition,false);
 		this.speed = speed;
 	}
 	
 
 	@Override
-	public void move(int speed) {
+	public void move() {
 		// TODO Auto-generated method stub
 		if(!isDestroy || y <= 460){
 			y += speed;

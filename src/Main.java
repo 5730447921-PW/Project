@@ -5,6 +5,7 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 
+import logic.GameLogic;
 import logic.Player;
 import logic.Status;
 import render.Screen;
@@ -21,8 +22,9 @@ public class Main {
 		// TODO Auto-generated method stub
 		JFrame f = new JFrame("Speial Fruit");
 		f.setLayout(new BorderLayout());
-		Screen s = new Screen();
-		StatusBar status = new StatusBar();
+		GameLogic gl = new GameLogic();
+		Screen s = new Screen(gl);
+
 		f.addKeyListener(new KeyListener() {
 			
 			@Override
@@ -44,17 +46,19 @@ public class Main {
 			}
 		});
 		f.add(s,BorderLayout.CENTER);
-		f.add(status,BorderLayout.NORTH);
+		f.add(gl.statusBar,BorderLayout.NORTH);
 		f.setVisible(true);
 		f.pack();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setResizable(false);
 		Thread t = new Thread(new Runnable() {
 			
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
 				while(true){
-					s.p.move();
+					gl.player.move();
+					gl.gameUpdate();
 					f.repaint();
 					try {
 						Thread.sleep(20);
