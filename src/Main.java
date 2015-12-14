@@ -1,3 +1,6 @@
+import javax.swing.JFrame;
+
+import render.Screen;
 
 public class Main {
 
@@ -7,8 +10,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("‚ª√‡®§§§§§T T");
-		System.out.println("‡∑    ");
+		JFrame f = new JFrame("Speial Fruit");
+		Screen s = new Screen();
+		f.add(s);
+		f.setVisible(true);
+		f.pack();
 	}
 
 }
