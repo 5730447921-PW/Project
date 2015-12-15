@@ -1,16 +1,12 @@
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 
 import logic.GameLogic;
-import logic.Player;
-import logic.Status;
 import render.Screen;
-import render.StatusBar;
 import utility.InputUtility;
 
 public class Main {
@@ -23,7 +19,6 @@ public class Main {
 		// TODO Auto-generated method stub
 		JFrame f = new JFrame("Special Fruits");
 		f.setLayout(new BorderLayout());		
-		f.setPreferredSize(new Dimension(1024,592));
 		f.addKeyListener(new KeyListener() {	
 			@Override
 			public void keyTyped(KeyEvent e) {
@@ -53,11 +48,12 @@ public class Main {
 				// TODO Auto-generated method stub
 				GameLogic gl = new GameLogic();
 				Screen s = new Screen(gl);
+				f.setResizable(false);
 				f.add(s,BorderLayout.CENTER);
 				f.add(gl.statusBar,BorderLayout.NORTH);
 				f.setVisible(true);
 				f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				f.setResizable(false);
+				
 				f.pack();
 				while(true){
 					

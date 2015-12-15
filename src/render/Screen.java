@@ -1,26 +1,16 @@
 package render;
 
-import java.applet.Applet;
-import java.applet.AudioClip;
 import java.awt.*;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.Graphics2D;
-import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URISyntaxException;
-
 import javax.imageio.ImageIO;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import logic.*;
-import utility.InputUtility;
 
 public class Screen extends JPanel {
 	public static int screenWidth=1024,screenHeight=512;
@@ -43,7 +33,7 @@ public class Screen extends JPanel {
 	public static Font smallfont = new Font("Tahoma",Font.BOLD,0);
 	static{
 		try {
-			largefont = Font.createFont(Font.TRUETYPE_FONT,new File(load.getResource("res/font/Arabica/Arabica file/Arabica.ttf").toURI()));
+			largefont = Font.createFont(Font.TRUETYPE_FONT,load.getResourceAsStream("res/font/Arabica.ttf"));
 			largefont = largefont.deriveFont(Font.BOLD, 70);
 			bigfont = largefont.deriveFont(Font.BOLD, 100);
 			smallfont = largefont.deriveFont(Font.BOLD, 40);
@@ -54,9 +44,6 @@ public class Screen extends JPanel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

@@ -31,20 +31,20 @@ public class GameLogic {
 	public boolean gameover = false;
 	private boolean soundopenPlaying = false;
 	private boolean soundplayPlaying = false;
-
+	private static ClassLoader load = GameLogic.class.getClassLoader();
 	static {
 		try {
-			imga = ImageIO.read(Screen.load.getResource("res/image/apple.png"));
-			imgb = ImageIO.read(Screen.load.getResource("res/image/banana.png"));
-			imgc = ImageIO.read(Screen.load.getResource("res/image/cherry.jpg"));
-			imgo = ImageIO.read(Screen.load.getResource("res/image/orange.png"));
-			imgs = ImageIO.read(Screen.load.getResource("res/image/strawberry.png"));
-			imgi = ImageIO.read(Screen.load.getResource("res/image/item.png"));
-			coin = Applet.newAudioClip(Screen.load.getResource("res/sound/smw_coin.wav").toURI().toURL());
+			imga = ImageIO.read(load.getResource("res/image/apple.png"));
+			imgb = ImageIO.read(load.getResource("res/image/banana.png"));
+			imgc = ImageIO.read(load.getResource("res/image/cherry.jpg"));
+			imgo = ImageIO.read(load.getResource("res/image/orange.png"));
+			imgs = ImageIO.read(load.getResource("res/image/strawberry.png"));
+			imgi = ImageIO.read(load.getResource("res/image/item.png"));
+			coin = Applet.newAudioClip(load.getResource("res/sound/smw_coin.wav").toURI().toURL());
 			soundplay = Applet.newAudioClip(
-					Screen.load.getResource("res/sound/musica-alegre-harpa-judaica-palhaco-circo.wav").toURI().toURL());
+					load.getResource("res/sound/musica-alegre-harpa-judaica-palhaco-circo.wav").toURI().toURL());
 			soundopen = Applet.newAudioClip(
-					Screen.load.getResource("res/sound/LA_MARCHE_DES_PETITS_ROBOTS_INSTRUMENTAL_converted.wav").toURI().toURL());
+					load.getResource("res/sound/LA_MARCHE_DES_PETITS_ROBOTS_INSTRUMENTAL_converted.wav").toURI().toURL());
 
 		} catch (IOException e) {
 
