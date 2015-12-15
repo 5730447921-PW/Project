@@ -128,7 +128,6 @@ public class GameLogic {
 			}
 			if(itemwork){
 				delayitem++;
-				System.out.println(delayitem);
 			}
 			checkFruitsOut();
 			
