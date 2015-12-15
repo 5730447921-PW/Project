@@ -44,7 +44,9 @@ public class StatusBar extends JPanel implements IRenderable {
 						
 						try {
 							Thread.sleep(1000);
+							if(!gl.gameover){
 							status.changeTime(1);
+							}
 
 						} catch (InterruptedException i) {
 
