@@ -21,12 +21,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		JFrame f = new JFrame("Special Fruit");
+		JFrame f = new JFrame("Special Fruits");
 		f.setLayout(new BorderLayout());
 		f.setPreferredSize(new Dimension(1024,592));
-		GameLogic gl = new GameLogic();
-		Screen s = new Screen(gl);
-
+		
+		
 		f.addKeyListener(new KeyListener() {
 			
 			@Override
@@ -47,23 +46,27 @@ public class Main {
 				InputUtility.setKeyPressed(e.getKeyCode(), true);
 			}
 		});
-		f.add(s,BorderLayout.CENTER);
-		f.add(gl.statusBar,BorderLayout.NORTH);
-		f.setVisible(true);
-		f.pack();
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		f.setResizable(false);
-		Thread t = new Thread(new Runnable() {
+		
+		
+		
+		Runnable r = new Runnable() {
 			
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
+				GameLogic gl = new GameLogic();
+				Screen s = new Screen(gl);
+				f.add(s,BorderLayout.CENTER);
+				f.add(gl.statusBar,BorderLayout.NORTH);
+				f.setVisible(true);
+				f.pack();
+				f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				f.setResizable(false);
 				while(true){
 					
 					f.repaint();
 					gl.player.move();
 					gl.gameUpdate();
-					
 					try {
 						Thread.sleep(15);
 					} catch (InterruptedException e) {
@@ -72,8 +75,12 @@ public class Main {
 					}
 				}
 			}
-		});
+		};
+		Thread t = new Thread(r);
 		t.start();
+		
+		
+		
 	}
 
 }

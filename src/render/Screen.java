@@ -86,12 +86,13 @@ public class Screen extends JPanel {
 		FontMetrics met1 = g2d.getFontMetrics();
 		double w2 = met1.getStringBounds("GAME OVER", g2d).getWidth();
 		double h2 = met1.getHeight();
-		if(gl.gameover){
-			g2d.drawString("GAME OVER",(int)(512-w2/2),(int)(256+h2/2)-100);
-		}
+		
 		
 		for (int i = 0; i < gl.fruits.size(); i++) {
 			gl.fruits.get(i).draw(g2d);
+		}
+		if(gl.gameover){
+			g2d.drawString("GAME OVER",(int)(512-w2/2),(int)(256+h2/2)-100);
 		}
 		gl.player.draw(g2d);
 		

@@ -7,7 +7,7 @@ public class Status {
 
 	public Status() {
 		score = 0;
-		time = 100;
+		time = 10;
 
 		
 	}

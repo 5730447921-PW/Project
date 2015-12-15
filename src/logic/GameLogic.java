@@ -24,11 +24,13 @@ public class GameLogic {
 	public ArrayList<Fruits> fruits = new ArrayList<>();
 	private int delay = 0;
 	private int delayitem = 0;
-	private static AudioClip coin, soundplay, soundopen,sound;
+	private static AudioClip coin, soundplay, soundopen;
 	public static BufferedImage imga, imgb, imgc, imgo, imgs,imgi;
 	public boolean conditon[]=new boolean[5];
 	public boolean itemwork = false;
 	public boolean gameover = false;
+	private boolean soundopenPlaying = false;
+	private boolean soundplayPlaying = false;
 
 	static {
 		try {
@@ -58,18 +60,25 @@ public class GameLogic {
 		
 		conditon = condition(conditon);
 		statusBar = new StatusBar(status,this);
-		
+		soundopen.loop();
+		soundopenPlaying=true;
 	}
 
 	public void gameUpdate() {
+		if(gameover){
+			return;
+		}
 		if (!start) {
-			sound = soundopen;
-			sound.play();
 			
 		} else {
-			
-			sound=soundplay;
-			sound.play();
+			if(soundopenPlaying){
+			soundopen.stop();
+			soundopenPlaying=false;
+			}
+			if(!soundplayPlaying){
+				soundplay.loop();
+				soundplayPlaying=true;
+			}
 			if(delayitem == 150){
 				itemwork = false;
 				delayitem = 0;
@@ -204,5 +213,6 @@ public class GameLogic {
 		condition[c] =true;
 		return condition;
 	}
+	
 
 }
