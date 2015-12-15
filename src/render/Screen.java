@@ -24,7 +24,7 @@ import utility.InputUtility;
 
 public class Screen extends JPanel {
 	public static int screenWidth=1024,screenHeight=512;
-	
+	private Status status;
 	private GameLogic gl;
 	public static ClassLoader load = Screen.class.getClassLoader();
 	private static BufferedImage image;
@@ -39,11 +39,13 @@ public class Screen extends JPanel {
 	}
 	
 	public static Font largefont = new Font("Tahoma",Font.BOLD,0);
+	public static Font bigfont = new Font("Tahoma",Font.BOLD,0);
 	public static Font smallfont = new Font("Tahoma",Font.BOLD,0);
 	static{
 		try {
 			largefont = Font.createFont(Font.TRUETYPE_FONT,new File(load.getResource("res/font/Arabica/Arabica file/Arabica.ttf").toURI()));
 			largefont = largefont.deriveFont(Font.BOLD, 70);
+			bigfont = largefont.deriveFont(Font.BOLD, 100);
 			smallfont = largefont.deriveFont(Font.BOLD, 40);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -73,14 +75,20 @@ public class Screen extends JPanel {
 		g2d.drawImage(image, null, 0, 0);
 		g2d.setFont(largefont);
 		FontMetrics met = g2d.getFontMetrics();
-		double w = met.getStringBounds("PRESS 'SPACE' TO START",g2d).getWidth();
-		double h = met.getHeight();
+		double w1 = met.getStringBounds("PRESS 'SPACE' TO START",g2d).getWidth();
+		double h1 = met.getHeight();
+		
 		g2d.setColor(Color.BLACK);
 		if(!gl.start){
-			g2d.drawString("PRESS 'SPACE' TO START",(int)(512-w/2),(int)(256+h/2)-100);
+			g2d.drawString("PRESS 'SPACE' TO START",(int)(512-w1/2),(int)(256+h1/2)-100);
 			}
-		
-		
+		g2d.setFont(bigfont);
+		FontMetrics met1 = g2d.getFontMetrics();
+		double w2 = met1.getStringBounds("GAME OVER", g2d).getWidth();
+		double h2 = met1.getHeight();
+		if(gl.gameover){
+			g2d.drawString("GAME OVER",(int)(512-w2/2),(int)(256+h2/2)-100);
+		}
 		
 		for (int i = 0; i < gl.fruits.size(); i++) {
 			gl.fruits.get(i).draw(g2d);

@@ -21,7 +21,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		JFrame f = new JFrame("Speial Fruit");
+		JFrame f = new JFrame("Special Fruit");
 		f.setLayout(new BorderLayout());
 		f.setPreferredSize(new Dimension(1024,592));
 		GameLogic gl = new GameLogic();

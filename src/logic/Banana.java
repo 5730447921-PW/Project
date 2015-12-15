@@ -17,6 +17,9 @@ public class Banana extends Fruits  {
 		super(RandomUtility.random(0,1024-img.getWidth()),0-img.getHeight(),5,isInCondition,false);
 		this.speed = speed;
 		this.img = img;
+		if(isInCondition) this.num = RandomUtility.random(10,20);
+		else this.score = -this.score;
+			
 		
 	}
 	
