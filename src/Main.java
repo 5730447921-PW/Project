@@ -23,8 +23,8 @@ public class Main {
 		// TODO Auto-generated method stub
 		JFrame f = new JFrame("Special Fruits");
 		f.setLayout(new BorderLayout());		
-		f.addKeyListener(new KeyListener() {
-			
+		f.setPreferredSize(new Dimension(1024,592));
+		f.addKeyListener(new KeyListener() {	
 			@Override
 			public void keyTyped(KeyEvent e) {
 				// TODO Auto-generated method stub
