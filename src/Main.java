@@ -22,10 +22,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		JFrame f = new JFrame("Special Fruits");
-		f.setLayout(new BorderLayout());
-		f.setPreferredSize(new Dimension(1024,592));
-		
-		
+		f.setLayout(new BorderLayout());		
 		f.addKeyListener(new KeyListener() {
 			
 			@Override
@@ -59,9 +56,9 @@ public class Main {
 				f.add(s,BorderLayout.CENTER);
 				f.add(gl.statusBar,BorderLayout.NORTH);
 				f.setVisible(true);
-				f.pack();
 				f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				f.setResizable(false);
+				f.pack();
 				while(true){
 					
 					f.repaint();

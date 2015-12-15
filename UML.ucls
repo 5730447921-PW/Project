@@ -4,7 +4,7 @@
   router="FAN">  
   <class id="1" language="java" name="Main" project="Project" file="/Project/src/Main.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="116" width="152" x="431" y="210"/>    
+    <position height="-1" width="-1" x="1130" y="1095"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -13,7 +13,7 @@
   </class>  
   <class id="2" language="java" name="logic.Apple" project="Project" file="/Project/src/logic/Apple.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="176" width="259" x="312" y="402"/>    
+    <position height="-1" width="-1" x="198" y="95"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -22,7 +22,7 @@
   </class>  
   <class id="3" language="java" name="logic.Banana" project="Project" file="/Project/src/logic/Banana.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="272" x="593" y="371"/>    
+    <position height="-1" width="-1" x="481" y="93"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -31,79 +31,79 @@
   </class>  
   <class id="4" language="java" name="logic.Cherry" project="Project" file="/Project/src/logic/Cherry.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="264" x="926" y="377"/>    
+    <position height="-1" width="-1" x="766" y="91"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="5" language="java" name="logic.Collectible" project="Project" 
+  <class id="5" language="java" name="logic.Orange" project="Project" file="/Project/src/logic/Orange.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1056" y="91"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="logic.Strawberry" project="Project" file="/Project/src/logic/Strawberry.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1347" y="95"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="7" language="java" name="logic.Collectible" project="Project" 
     file="/Project/src/logic/Collectible.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="96" width="142" x="317" y="679"/>    
+    <position height="-1" width="-1" x="1143" y="884"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="6" language="java" name="logic.Fruits" project="Project" file="/Project/src/logic/Fruits.java" 
+  <class id="8" language="java" name="logic.Fruits" project="Project" file="/Project/src/logic/Fruits.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="795" y="809"/>    
+    <position height="-1" width="-1" x="760" y="528"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="logic.GameLogic" project="Project" file="/Project/src/logic/GameLogic.java" 
+  <class id="9" language="java" name="logic.GameLogic" project="Project" file="/Project/src/logic/GameLogic.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="111" y="833"/>    
+    <position height="-1" width="-1" x="190" y="661"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="logic.Item" project="Project" file="/Project/src/logic/Item.java" binary="false" 
+  <class id="10" language="java" name="logic.Item" project="Project" file="/Project/src/logic/Item.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="462" y="1139"/>    
+    <position height="176" width="247" x="1140" y="455"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="logic.Orange" project="Project" file="/Project/src/logic/Orange.java" 
+  <class id="11" language="java" name="logic.Player" project="Project" file="/Project/src/logic/Player.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="270" x="1015" y="672"/>    
+    <position height="-1" width="-1" x="913" y="1341"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="logic.Player" project="Project" file="/Project/src/logic/Player.java" 
+  <class id="12" language="java" name="logic.Status" project="Project" file="/Project/src/logic/Status.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="173" y="258"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="11" language="java" name="logic.Status" project="Project" file="/Project/src/logic/Status.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="191" y="1286"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="logic.Strawberry" project="Project" file="/Project/src/logic/Strawberry.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="293" x="1014" y="913"/>    
+    <position height="-1" width="-1" x="214" y="1152"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -112,81 +112,96 @@
   </class>  
   <interface id="13" language="java" name="render.IRenderable" project="Project" 
     file="/Project/src/render/IRenderable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="818" y="1310"/>    
+    <position height="-1" width="-1" x="761" y="864"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <realization id="14">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <generalization id="15">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <realization id="16">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
+  <class id="14" language="java" name="render.Screen" project="Project" file="/Project/src/render/Screen.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-123" y="928"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="render.StatusBar" project="Project" file="/Project/src/render/StatusBar.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="575" y="1258"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="javax.swing.JPanel" project="2110215_Lab6_TwitterSearcher_InClass" 
+    file="C:/Program Files/Java/jre1.8.0_51/lib/rt.jar" binary="true" corner="BOTTOM_RIGHT">    
+    <position height="383" width="323" x="-61" y="1505"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
   <generalization id="17">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="6"/>  
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="16"/>  
   </generalization>  
-  <association id="18">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="19" name="fruits"/>      
-      <multiplicity id="20" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="false" multiplicity="false"/>  
-  </association>  
-  <generalization id="21">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <realization id="22">    
+  <generalization id="18">    
     <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="19">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <generalization id="20">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="21">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <realization id="22">    
+    <end type="SOURCE" refId="15"/>    
     <end type="TARGET" refId="13"/>  
   </realization>  
   <realization id="23">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <generalization id="24">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <generalization id="25">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <generalization id="26">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <association id="27">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="28" name="player"/>      
-      <multiplicity id="29" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="false" multiplicity="false"/>  
-  </association>  
-  <association id="30">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="31" name="status"/>      
-      <multiplicity id="32" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="false" multiplicity="false"/>  
-  </association>  
-  <realization id="33">    
     <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="13"/>  
   </realization>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="25">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="26">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="27">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="28">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="29">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="30">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
