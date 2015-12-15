@@ -1,6 +1,7 @@
 package logic;
 
 import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -11,17 +12,12 @@ import utility.RandomUtility;
 
 public class Banana extends Fruits  {
 	
-	static{
-		try{
-			img = ImageIO.read(Screen.load.getResource("res/image/banana.png"));
-		}catch(IOException e){
-			
-		}
-	}
 	
-	public Banana(boolean isInCondition,int speed){
+	public Banana(BufferedImage img,boolean isInCondition,int speed){
 		super(RandomUtility.random(0,1024-img.getWidth()),0-img.getHeight(),5,isInCondition,false);
 		this.speed = speed;
+		this.img = img;
+		
 	}
 	
 

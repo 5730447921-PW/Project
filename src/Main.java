@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -22,6 +23,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		JFrame f = new JFrame("Speial Fruit");
 		f.setLayout(new BorderLayout());
+		f.setPreferredSize(new Dimension(1024,592));
 		GameLogic gl = new GameLogic();
 		Screen s = new Screen(gl);
 
@@ -57,11 +59,13 @@ public class Main {
 			public void run() {
 				// TODO Auto-generated method stub
 				while(true){
+					
+					f.repaint();
 					gl.player.move();
 					gl.gameUpdate();
-					f.repaint();
+					
 					try {
-						Thread.sleep(20);
+						Thread.sleep(15);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();

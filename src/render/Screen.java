@@ -24,17 +24,16 @@ import utility.InputUtility;
 
 public class Screen extends JPanel {
 	public static int screenWidth=1024,screenHeight=512;
-	private boolean start = false;
+	
 	private GameLogic gl;
 	public static ClassLoader load = Screen.class.getClassLoader();
 	private static BufferedImage image;
-	private static AudioClip sound ;
 	static{
 		try{
 			image = ImageIO.read(load.getResource("res/image/bg3.png"));
-			sound = Applet.newAudioClip(load.getResource("res/sound/LA_MARCHE_DES_PETITS_ROBOTS_INSTRUMENTAL.wav").toURI().toURL());
+			
 		}
-		catch(IOException | URISyntaxException e){
+		catch(IOException e){
 			System.out.println("test");
 		}
 	}
@@ -63,31 +62,33 @@ public class Screen extends JPanel {
 	
 	public Screen(GameLogic gl){
 		this.gl=gl;
-		sound.loop();
-		this.requestFocus();
+		
 		this.setPreferredSize(new Dimension(screenWidth	,screenHeight));
 	}
 	
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
+		
 		Graphics2D g2d = (Graphics2D)g;
 		g2d.drawImage(image, null, 0, 0);
-		
-		gl.player.draw(g2d);
-		for (int i = 0; i < gl.fruits.size(); i++) {
-			gl.fruits.get(i).draw(g2d);
-		}
 		g2d.setFont(largefont);
 		FontMetrics met = g2d.getFontMetrics();
 		double w = met.getStringBounds("PRESS 'SPACE' TO START",g2d).getWidth();
 		double h = met.getHeight();
 		g2d.setColor(Color.BLACK);
-		if(!start){
-		g2d.drawString("PRESS 'SPACE' TO START",(int)(512-w/2),(int)(256+h/2)-100);
+		if(!gl.start){
+			g2d.drawString("PRESS 'SPACE' TO START",(int)(512-w/2),(int)(256+h/2)-100);
+			}
+		
+		
+		
+		for (int i = 0; i < gl.fruits.size(); i++) {
+			gl.fruits.get(i).draw(g2d);
 		}
-		if(InputUtility.getKeyPressed(KeyEvent.VK_SPACE)){
-			start = true;
-		}
+		gl.player.draw(g2d);
+		
+		
+		
 	}
 	
 	

@@ -10,10 +10,10 @@ import javax.swing.JPanel;
 import logic.Status;
 
 public class StatusBar extends JPanel implements IRenderable {
-	
-	public StatusBar(){
-		setPreferredSize(new Dimension(1024,40));
-		
+	private Status status;
+	public StatusBar(Status status){
+		setPreferredSize(new Dimension(Screen.screenWidth,40));
+		this.status = status;
 		
 	}
 	
@@ -34,9 +34,22 @@ public class StatusBar extends JPanel implements IRenderable {
 		// TODO Auto-generated method stub
 		
 		g2d.setColor(Color.BLACK);
-		g2d.fillRect(0, 0, 1024,40);
+		g2d.fillRect(0, 0, getWidth(),40);
 		g2d.setColor(Color.WHITE);
 		g2d.setFont(Screen.smallfont);
+		/*new Thread(new Runnable() {
+			public void run() {
+				while(true){//********
+					try{
+						Thread.sleep(1000);
+						status.changeTime(1);
+					}catch(InterruptedException i){
+						
+					}
+					
+				}
+			}
+		}).start();*/
 		g2d.drawString("Time : " + Status.time,5,30);
 		g2d.drawString("Score : " + Status.score,341,30);
 	}

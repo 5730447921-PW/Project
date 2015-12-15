@@ -1,6 +1,7 @@
 package logic;
 
 import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -11,17 +12,11 @@ import utility.RandomUtility;
 
 public class Orange extends Fruits {
 	
-	static{
-		try{
-			img = ImageIO.read(Screen.load.getResource("res/image/orange.png"));
-		}catch(IOException e){
-			
-		}
-	}
 	
-	public Orange(boolean isInCondition,int speed){
+	public Orange(BufferedImage img,boolean isInCondition,int speed){
 		super(RandomUtility.random(0,1024-img.getWidth()),0-img.getHeight(),5,isInCondition,false);
 		this.speed = speed;
+		this.img = img;
 	}
 	
 

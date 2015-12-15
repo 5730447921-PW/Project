@@ -16,7 +16,10 @@ public class Status {
 	}
 	
 	public void changeTime(int time){
-		this.time -= time;
+		if(this.time - time >0){
+			this.time -= time;
+		}
+		else this.time = 0;
 	}
 	
 	

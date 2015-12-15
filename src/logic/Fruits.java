@@ -11,7 +11,8 @@ public abstract class Fruits implements Collectible , IRenderable{
 	protected int score;
 	protected boolean isInCondition;
 	protected boolean isDestroy;
-	protected static BufferedImage img;
+	protected BufferedImage img;
+
 
 	
 	public Fruits(int x, int y, int score, boolean isInCondition, boolean isDestroy){
